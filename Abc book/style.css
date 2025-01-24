@@ -113,6 +113,7 @@ span a:hover{
 .alpha-image>img{
     border-radius: 30px;
     /* mix-blend-mode:multiply; */
+    /* mix-blend-mode: color-burn; */
     width: 180px;
 }
 
