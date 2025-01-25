@@ -1,6 +1,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
 
+:root{
+    --color:#ff5613;
+    --seccolor:#f3d784;
+}
+
 
 body{
     background-image: url(./assets/background2.jpeg);
@@ -9,14 +14,14 @@ body{
     background-attachment: fixed;
 }
 .main-heading{
-    background-color: #f3d784;
+    background-color:var(--seccolor);
     display: flex;
     justify-content:center;
     gap: 20px;
     font-size: 1.5em;
     font-family: "DynaPuff", serif;
     border-radius: 30px;
-    color: #ff5613;
+    color: var(--color);
     margin-bottom: 10px;
     
     
@@ -43,7 +48,7 @@ body{
 }
 
 .nav a{
-    color: #ff5613;
+    color: var(--color);
     text-decoration: none;
     font-family: "DynaPuff", serif;
     font-size: 2em;
@@ -56,7 +61,7 @@ span.alpha{
 
 span a:hover{
     text-decoration: underline;
-    text-decoration-color: #ff5613;
+    text-decoration-color: var(--color);
     text-decoration-thickness: 3px;
 }
 
@@ -68,7 +73,7 @@ span a:hover{
     width:700px;
     height: 210px;
     border-radius: 20px;
-    background-color: #f3d784;
+    background-color: var(--seccolor);
 }
 
 .alpha-box:hover{
@@ -85,7 +90,7 @@ span a:hover{
     font-family:"DynaPuff", serif; 
     font-size: 9em;
     padding: 10px;
-    color: #ff5613;
+    color: var(--color);
     
 }
 
@@ -99,7 +104,7 @@ span a:hover{
 }
 
 .alpha-name>span{
-    color: #ff5613;
+    color: var(--color);
     font-family: "DynaPuff", serif;
     font-size: 2em;
 }
