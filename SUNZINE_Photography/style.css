@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=DynaPuff:wght@400..700&display=swap');
+
+body{
+    background-color: #e9e9e982;
+}
+
+nav{
+    background-color: white;
+    padding: 28px 78px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+
+nav img{
+    height: 24px;
+    width: 142px;
+}
+
+nav ul{
+    display: flex;
+    font-family: "Aldrich", serif;
+}
+
+nav ul>li{
+    list-style: none;
+    padding: 0px 15px;
+}
+nav ul>li>a{
+    text-decoration: none;
+    color:rgb(154, 154, 154);
+}
+nav ul>li>a:hover{
+    text-decoration:underline;
+    text-decoration-color: rgb(40, 159, 56);
+    text-decoration-thickness: 5px;
+    color: black;
+}
+
+
+.nav-options{
+    display:flex;
+}
+
+.nav-options img{
+    width: 30px;
+    height: 30px;
+}
+
+.icon{
+    text-align: center;
+    padding: 6px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+.main-heading{
+    padding: 80px;
+}
+
+.main-heading>h1{
+    font-family:"Aldrich", serif ;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.6;
+}
+
+.second-nav>ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.second-nav>ul>li{
+    list-style: none;
+    padding: 18px;
+    font-family: "Aldrich", serif;
+}
+
+.second-nav>ul>li>a{
+    text-decoration: none;
+    color: rgb(154, 154, 154);
+}
+.second-nav>ul>li>a:hover{
+    text-decoration:underline;
+    text-decoration-color: rgb(40, 159, 56);
+    text-decoration-thickness: 5px;
+    color: black;
+}
+
+.main{
+    display: flex;
+    flex-flow: row wrap;
+    gap:  10px;
+    justify-content: center;
+
+}
+
+.card{
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+    /* flex-shrink: 1; */
+}
+
+
+
+.card1{
+    background-image: url(./assets/img4.jpg);
+    flex-grow: 4;
+}
+.card2{
+    background-image: url(./assets/15.jpg);
+}
+.card3{
+    background-image: url(./assets/9.jpg);
+}
+.card4{
+    background-image: url(./assets/img5.jpg);
+}
+.card5{
+    background-image: url(./assets/img6.jpg);
+    flex-grow: 4;
+}
+.card6{
+    background-image: url(./assets/13.jpg);
+}
+.card7{
+    background-image: url(./assets/14.jpg);
+    flex-grow: 4;
+}
+.card8{
+    background-image: url(./assets/img7.jpg);
+}
+.card9{
+    background-image: url(./assets/10.jpg);
+}
+.card10{
+    background-image: url(./assets/18.jpg);
+}
+.card11{
+    background-image: url(./assets/img2.jpg);
+    flex-grow: 4;
+}
+.card12{
+    background-image: url(./assets/img3.jpg);
+}
+.card13{
+    background-image: url(./assets/19.jpg);
+}
+.card14{
+    background-image: url(./assets/img1.jpg);
+    flex-grow: 4;
+}
+.card15{
+    background-image: url(./assets/17.jpg);
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #222222;
+    padding: 25px 40px 15px;
+}
+
+footer>.logo{
+    padding: 10px 15px;
+}
+footer>.content{
+    padding: 10px 15px;
+}
+footer>.content>p{
+    color: rgb(151, 151, 151);
+    font-size: 1.2em;
+    font-family: sans-serif;
+}
+
+footer>.icons>ul{
+    display: flex;
+    list-style: none;
+}
+footer>.icons>ul>li{
+    color:white;
+    padding:5px 10px;
+}
+
+
+@media  screen and (max-width:768px){
+    .nav-options span, .nav-options img{
+        display: none;
+    }
+}
+@media  screen and (max-width:425px){
+    .nav-options span, .nav-options img{
+        display: block;
+    }
+
+    .nav-options>ul {
+        display: none;
+    }
+
+    .main-heading>h1{
+        font-size: 1.6em;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
