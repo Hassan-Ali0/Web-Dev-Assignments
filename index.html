@@ -5,10 +5,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hassan Web</title>
+  <style>
+    .main-heading {
+      background-color: blueviolet;
+    }
+
+    .main-heading>h1 {
+      color: white;
+      text-align: center;
+      font-size: 2.5em;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .main{
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #ca9cf9;
+      width: 400px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .card:hover{
+      box-shadow: ;
+    }
+
+    .card a {
+      text-decoration: none;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: rgb(103, 6, 195);
+    }
+    .card a:hover {
+      text-decoration: none;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: rgb(103, 6, 195);
+    }
+    .card a:visited {
+      text-decoration: none;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: rgb(103, 6, 195);
+    }
+  </style>
+
 </head>
 
 <body>
-  <h1><a href="./Abc book/index.html">ABC BOOK</a></h1>
+
+  <div class="main-heading">
+    <h1>My Projects</h1>
+  </div>
+
+  <div class="main">
+
+    <div class="card">
+      <h2><a href="">Periodic Table</a></h2>
+    </div>
+    <div class="card">
+      <h2><a href="">Link Multiple Pages</a></h2>
+    </div>
+    <div class="card">
+      <h2><a href="">Abc Book</a></h2>
+    </div>
+    <div class="card">
+      <h2><a href="">SUNZINE_Photography</a></h2>
+    </div>
+  </div>
 </body>
 
 </html>

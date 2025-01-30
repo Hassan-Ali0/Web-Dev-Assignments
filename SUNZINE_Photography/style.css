@@ -5,6 +5,7 @@ body{
 }
 
 nav{
+    height: 30px;
     background-color: white;
     padding: 28px 78px;
     display: flex;
@@ -152,10 +153,10 @@ nav ul>li>a:hover{
 }
 .card11{
     background-image: url(./assets/img2.jpg);
-    flex-grow: 4;
 }
 .card12{
     background-image: url(./assets/img3.jpg);
+    flex-grow: 4;
 }
 .card13{
     background-image: url(./assets/19.jpg);
