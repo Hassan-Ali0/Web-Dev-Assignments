@@ -2,9 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DynaPuff:wght@400..700&display=swap');
 
 body{
-    padding: 0px 85px;
     font-family: "Barlow", serif;
     background-color: #0931e2;
+    padding: 0px 85px;
+}
+
+.main{
+
 }
 
 .logo{
@@ -49,6 +53,7 @@ body{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    row-gap: 50px;
 }
 
 .image-palette{
@@ -56,17 +61,22 @@ body{
 }
 .image-palette>img{
     height: 230px;
-    width: 315px;
+    width: 310px;
     border-radius: 7px;
 }
 .palette{
     display: flex;
     flex-direction: column;
-    padding: 8px 8px 0px 8px;
+    padding: 8px 5px 0px 8px;
     background-color:white;
     height: 230px;
+    width: 280px;
     border-radius: 7px;
     row-gap: 4px;
+}
+
+.palette img{
+    width: 275px;
 }
 
 .palettes{
@@ -117,3 +127,64 @@ body{
     cursor: pointer;
 }
 
+
+@media screen and (max-width:1024px){
+    
+    .image-palette{
+        display: none;
+    }
+
+}
+@media screen and (max-width:768px){
+    
+    body{
+        padding: 0px 50px;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    
+    .nav>ul{
+        display: none;
+    }
+
+    .second-nav{
+        display: none;
+    }
+
+    .nav{
+        justify-content: center;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+
+}
+@media screen and (max-width:425px){
+    
+    body{
+        padding: 0px 5px;
+    }
+
+
+
+    .main-palettes{
+        flex-direction: column;
+    }
+
+    .palettes{
+        justify-content: center;
+
+    }
+
+    .main-palettes{
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+}

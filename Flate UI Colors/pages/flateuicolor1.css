@@ -2,6 +2,8 @@
 
 body{
     font-family: "Barlow", serif;
+    height: 100vh;
+    overflow: scroll;
 }
 
 
@@ -9,7 +11,8 @@ nav{
 
     display: flex;
     justify-content: space-between;
-    padding: 5px 0px;
+    padding: 0px 0px 5px 0px;
+    height: 10%;
 }
 
 .back{
@@ -44,7 +47,7 @@ nav{
 .main{
     display: flex;
     flex-wrap: wrap;
-    height: 770px;
+    height: 80%;
 }
 
 .color-palette{
@@ -52,8 +55,9 @@ nav{
     height: 25%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
+    position: relative;
 
 }
 
@@ -66,14 +70,24 @@ nav{
     font-size: 1.3em;
     font-weight: bold;
     cursor: pointer;
-    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 30%;
 
 }
 
-.color-palette>button:hover{
-    opacity: 1;
+.color-palette:hover button{
+    display: block;
 }
 
+
+.color-palette>span{
+    font-size: 1.1em;
+    padding: 8px;
+    color: white;
+    font-weight: 600;
+}
 
 
 .terquoise{
@@ -156,14 +170,39 @@ nav{
     background-color: #7f8c8d;
 }
 
-.color-palette>span{
 
-    width: 88px;
-}
 
 
 footer{
     text-align: right;
     font-size: 1.2em;
     font-weight: 600;
+    height: 10%;
+}
+
+
+@media screen and (max-width:425px){
+
+    nav{
+        justify-content: center;
+    }
+
+    nav>.back{
+        display: none;
+    }
+    nav>.sound{
+        display: none;
+    }
+
+    .color-palette>span{
+        display: none;
+    }
+
+    .color-palette>button{
+        width: 50px;
+        height: 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+
 }
