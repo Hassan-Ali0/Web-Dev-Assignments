@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 3px;
+}
+
+.nav-container{
+    position: sticky;
+    top: 0px;
+    background-color: black;
+}
+
+.logo>img , .icons>img{
+    mix-blend-mode: hard-light;
+}
+
+.nav-options{
+    list-style: none;
+    padding-top: 10px;
+}
+
+.nav-options>li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+}
+
+.first-container{
+    height: 600px;
+    background-image: url(./assets/hero_superbowl_2025__bv080j70jzte_mediumtall.jpg);
+    background-position: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.first-container>h2{
+    color: white;
+    display: block;
+}
+
+.first-container>img{
+    height: 150px;
+    width: 200px;
+}
+
+.stream{
+    border-radius: 25px;
+    border: none;
+    color: black;
+    background-color: white;
+    width: 135px;
+    height: 45px;
+    font-size: 1.1em;
+}
+.watch{
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    width: 170px;
+    height: 45px;
+    font-size: 1.1em;
+}
+
+.second-container{
+    background-image: url(./assets/IPhone.jpg);
+    height: 600px;
+    background-position: center;
+    padding: 10px;
+}
+
+.second-container>h2{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+.second-container>p{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.learn{
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    background-color: #0071e3;
+}
+
+
+.buy{
+    color: #0071e3;
+    background-color: #ffffff00;
+    border: 1px solid #0071e3;
+    border-radius: 25px;
+    width: 60px;
+    height: 40px;
+}
+
+
+.third-container{
+    height: 600px;
+    background-image:url(./assets/hero_valentines_day_2025__dkl6dq1rjhqq_mediumtall.png);
+    background-position: center;
+    background-size: auto;
+}
+
+.third-container>h2{
+    font-size: 3em;
+    font-weight: 700;
+}
+.third-container>p{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.shop{
+    color: white;
+    background-color: #0071e3;
+    width: 80px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+}
