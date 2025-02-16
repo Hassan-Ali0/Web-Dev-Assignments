@@ -231,13 +231,19 @@ main {
     width: 68%;
     font-size: 0.9em;
     padding: 1px 5px ;
+    overflow: hidden;
     text-overflow: ellipsis;
-    /* overflow-x: hidden; */
+    white-space: nowrap;
 }
 .email>h4{
     width: 20%;
     font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
+
+
 
 .email>img{
     width: 20px;
