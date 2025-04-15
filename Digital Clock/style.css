@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    row-gap: 50px;
+}
+
+.main>h1{
+    color: aqua;
+    font-size: 3em;
+    justify-content: flex-start;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.container{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    width: 400px;
+    border-radius: 15px;
+    font-family: "Orbitron", sans-serif;
+    border: 5px solid aqua;
+    /* border-image: linear-gradient(to right,aqua,blue) 11 repeat; */
+    box-shadow: 0px 0px 50px 0px blue;
+    background-color: black;
+    
+}
+
+
+
+.time{
+    height: 70%;
+    background:linear-gradient(to right,#fc00ff,#00dbde,#fc00ff,#00dbde);
+    background-clip: text;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.date{
+    height: 30%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color:rgb(0, 225, 255);
+    font-size: 1.4em; 
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+
+.time>span{
+    color:transparent;
+    font-size: 3em;
+    font-weight: 600;
+}
+
