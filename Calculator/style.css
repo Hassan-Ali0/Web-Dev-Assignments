@@ -46,11 +46,14 @@ body {
   }
 
   #clear-btn{
-    /* height: 20px; */
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .history>span{
+    margin-bottom: 5px;
   }
   
   .display {

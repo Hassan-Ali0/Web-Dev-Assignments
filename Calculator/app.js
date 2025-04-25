@@ -1,5 +1,6 @@
 var display = document.getElementById('input');
 var historyElm = document.getElementById('hst');
+var hstElm = document.getElementById('history')
 
 function calculate(btnValue) {
     var inputValue = display.value
@@ -37,7 +38,7 @@ function calculate(btnValue) {
 
 
     function clearHst(){
-        historyElm.removeChild('span')
+        historyElm.innerHTML = '';
     }
 
 }

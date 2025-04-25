@@ -4,7 +4,7 @@ var headerElm = document.getElementsByClassName('header')[0];
 var leftElm = document.getElementsByClassName('left')[0];
 leftElm.appendChild(mainElm);
 
-var colors = ['lightgreen', 'lightblue', 'purple', 'yellow'];
+var colors = ['rgb(58 240 68)', 'blue', 'purple', 'aqua'];
 var randomNum = Math.floor(Math.random() * 4);
 var mainElmColor = mainElm.style.backgroundColor = colors[randomNum];
 mainElm.className = 'main-box';
