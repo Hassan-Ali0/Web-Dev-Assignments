@@ -5,12 +5,13 @@ function inputValidation(e){
     numError.style.color='red';
     if( inputValue.length > 11){
         numError.innerText = 'Invalid';
-        numElm.style.border='2px solid red';
-        numElm.style.boxShadow='none';
+        e.target.className = ' input-focus';
         return
     }
       numError.innerText = '';
-      e.target.className = 'focus';
+      e.target.className = ' fokus';
+      console.log(e.target.className)
+      
 }
 
 function pV(){
