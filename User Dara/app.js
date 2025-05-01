@@ -174,6 +174,7 @@ var data = [
   var mainDiv = document.querySelector('.main');
   var usernameHeading = document.querySelector('#username')
   var detailsBackground = document.querySelector('.background')
+  var userInfo = document.querySelector('.user-info')
 
 for (let i = 0; i < data.length; i++) {
     var userDiv = document.createElement('div');
@@ -197,17 +198,41 @@ for (let i = 0; i < data.length; i++) {
       detailsBackground.style.display='flex';
       
       usernameHeading.innerText = obj.name.firstname + ' ' + obj.name.lastname ;
-      var dataKey = document.createElement('span');
-      var dataValue = document.createElement('span');
+      
 
-      dataKey.className = 'data-key' ;
-      dataValue.className = 'data-value' ;
+      var count = 0; 
+      
+      for(key in obj){
+        count++
+      }
+
+      for(key in obj){
+        var keyKey = [];
+        keyKey.push(key) ;
+
+        for(var i=0;i < count; i++){
+
+          var dataKey = document.createElement('span');
+          var dataValue = document.createElement('span');
+          dataKey.className = 'data-key' ;
+          dataValue.className = 'data-value' ;
+  
+          dataKey.innerText = keyKey[i];
+          
+        }
+
+      }
+      
+     
+      
 
 
-
+      
+      userInfo.appendChild(dataKey)
+      userInfo.innerHTML = '' ;
     })
 
-    function showDiv(){
+    function hideDiv(){
       detailsBackground.style.display= 'none'
     }
     
