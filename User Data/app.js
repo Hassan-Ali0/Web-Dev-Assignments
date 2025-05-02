@@ -176,7 +176,7 @@ var data = [
   var detailsBackground = document.querySelector('.background')
   var userInfo = document.querySelector('.user-info')
 
-for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     var userDiv = document.createElement('div');
     var userProfile = document.createElement('img') ;
     var showBtn = document.createElement('button');
@@ -192,46 +192,41 @@ for (let i = 0; i < data.length; i++) {
     userDiv.appendChild(showBtn)
     
     userDiv.addEventListener('click', function(e){
+
+      userInfo.innerHTML = '' ;
+
+
       var id = e.target.id; 
       var obj = data[id-1];
-      
-      detailsBackground.style.display='flex';
-      
-      usernameHeading.innerText = obj.name.firstname + ' ' + obj.name.lastname ;
-      
 
-      var count = 0; 
-      
-      for(key in obj){
-        count++
-      }
-
-      for(key in obj){
-        var keyKey = [];
-        keyKey.push(key) ;
-
-        for(var i=0;i < count; i++){
-
-          var dataKey = document.createElement('span');
-          var dataValue = document.createElement('span');
-          dataKey.className = 'data-key' ;
-          dataValue.className = 'data-value' ;
-  
-          dataKey.innerText = keyKey[i];
-          
+        
+    for(key in obj){ 
+      if(typeof obj[key] === 'object'){ 
+        for(key2 in obj[key]){
+          if(typeof obj[key][key2] == 'object'){
+            for(key3 in obj[key][key2]){
+            userInfo.innerHTML += key3 + " : "+ obj[key][key2][key3]
+            userInfo.innerHTML += `<br/>`
+            }
+          }
+          else{
+            userInfo.innerHTML += key2 + " : "+ obj[key][key2]
+            userInfo.innerHTML += `<br/>`
+          }
         }
+      }else{
+        userInfo.innerHTML += key + " : "+ obj[key]
+        userInfo.innerHTML += `<br/>`
 
       }
-      
-     
-      
+    }
+        
+        
+    detailsBackground.style.display='flex';
+        
 
-
-      
-      userInfo.appendChild(dataKey)
-      userInfo.innerHTML = '' ;
     })
-
+    
     function hideDiv(){
       detailsBackground.style.display= 'none'
     }
