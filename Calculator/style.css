@@ -52,8 +52,9 @@ body {
     align-items: center;
   }
 
-  .history>span{
+  #history>span{
     margin-bottom: 5px;
+    display: block;
   }
   
   .display {

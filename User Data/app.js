@@ -191,13 +191,15 @@ var data = [
     userDiv.appendChild(userProfile);
     userDiv.appendChild(showBtn)
     
-    userDiv.addEventListener('click', function(e){
+    showBtn.addEventListener('click', function(e){
 
       userInfo.innerHTML = '' ;
 
-
+      
       var id = e.target.id; 
       var obj = data[id-1];
+      
+      usernameHeading.innerText = obj.name.firstname + ' ' + obj.name.lastname ;
 
         
     for(key in obj){ 
@@ -205,18 +207,18 @@ var data = [
         for(key2 in obj[key]){
           if(typeof obj[key][key2] == 'object'){
             for(key3 in obj[key][key2]){
-            userInfo.innerHTML += key3 + " : "+ obj[key][key2][key3]
-            userInfo.innerHTML += `<br/>`
+            userInfo.innerHTML += key3 + " : " +  ''+ obj[key][key2][key3]
+            userInfo.innerHTML += `<br/>` 
             }
           }
           else{
-            userInfo.innerHTML += key2 + " : "+ obj[key][key2]
-            userInfo.innerHTML += `<br/>`
+            userInfo.innerHTML += key2 + " : " +  ''+ obj[key][key2]
+            userInfo.innerHTML += `<br/>` 
           }
         }
       }else{
-        userInfo.innerHTML += key + " : "+ obj[key]
-        userInfo.innerHTML += `<br/>`
+        userInfo.innerHTML += key + " : " + ' '+ obj[key]
+        userInfo.innerHTML += `<br/>` 
 
       }
     }

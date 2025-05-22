@@ -1,7 +1,7 @@
 function inputValidation(e){
-    var numError = document.getElementById('num-error')
-    var numElm = document.getElementById('num')
-    var inputValue = e.target.value;
+    let numError = document.getElementById('num-error')
+    let numElm = document.getElementById('num')
+    let inputValue = e.target.value;
     numError.style.color='red';
     if( inputValue.length > 11){
         numError.innerText = 'Invalid';
@@ -15,7 +15,7 @@ function inputValidation(e){
 }
 
 function pV(){
-    var passInput = document.getElementById('pass')
+    let passInput = document.getElementById('pass')
     if(passInput.type === 'text'){
       passInput.type = 'password';
     return

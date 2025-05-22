@@ -64,7 +64,7 @@ body{
 }
 
 h2{
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
     text-align: center;
@@ -89,6 +89,7 @@ h2{
     background-color: #fff;
     box-shadow: 0px 0px 10px 0px black;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .header{
@@ -119,11 +120,16 @@ h2{
 
 .user-info{
     height: 85%;
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-weight: normal ;
     padding: 10px;
     line-height: 2;
     display: flex;
     justify-content: center;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow: scroll;   
+    word-spacing: 5px;
+    
 }
