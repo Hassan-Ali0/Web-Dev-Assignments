@@ -23,6 +23,8 @@ body{
     height: 100px;
     background-color: rgb(24 46 154);
     align-items: baseline;
+    position: sticky ;
+    top: 0px;
 
 }
 
@@ -69,52 +71,68 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 15px;
 
 }
 
 .card{
-    height: 350px;
-    width: 350px;
+    height: 360px;
+    width: 330px;
     padding: 5px 15px;
     box-shadow: 0px 0px 3px 0px black;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     background-color: #fff;
-    overflow: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(103%);
 }
 
 .product-image{
     height: 250px;
+    align-self: center;
 
 }
 
 .product-title{
-    width: 100%;
-    text-align: center;
+    width: 100%;    
     font-size: 1.2em;
 
 }
 
 .product-desc{
-    width: 100%;
-    height: 5px;
+    width: 90%;
+    padding: 10px 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.toogle{
+.product-price{
+    padding: 5px 0px ;
+    color: red;
+    font-size: 1.3em;
+}
+
+.product-rating{
+    font-size: 0.9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.toggle{
    width: 70%;
    justify-content: end;
    padding: 0px 20px ;
    display: none;
 }
 
-.toogle>span{
+.toggle>span{
     background-color: inherit;
     border: 2px solid white;
     padding: 8px;
@@ -123,7 +141,7 @@ body{
 }
 
 
-.toogle-nav{
+.toggle-nav{
     height: 100vh;
     width: 0px;
     background-color: rgb(24 46 154);
@@ -135,32 +153,32 @@ body{
     transition: width 0.5s ease ;
 }
 
-.toogled-nav{
+.toggled-nav{
     display: block;
     width: 225px;
 }
-.toogled-nav>img{
+.toggled-nav>img{
     padding: 10px;
 }
 
-.toogle-nav>li{
+.toggle-nav>li{
     width: 100%;
     padding: 10px 20px ;
     border-bottom: 2px solid white;
 }
 
-.toogle-nav>li>a{
+.toggle-nav>li>a{
     text-decoration: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5em;
     color: white;
 }
 
-.toogle-nav>li:hover{
+.toggle-nav>li:hover{
     background-color: #ffffff13;
 }
 
-.toogle-nav>li>a:hover{
+.toggle-nav>li>a:hover{
     text-decoration: underline;
 }
 
@@ -170,7 +188,7 @@ body{
         display: none;
     }
 
-    .toogle{
+    .toggle{
         display: flex;
     }
 

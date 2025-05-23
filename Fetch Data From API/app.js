@@ -1,5 +1,5 @@
 let mainDiv = document.querySelector('#main') ;
-let toogleNav = document.querySelector('.toogle-nav') ;
+let toggleNav = document.querySelector('.toggle-nav') ;
 let data = [] ;
 
 function renderCards(){
@@ -12,11 +12,16 @@ function renderCards(){
         let productDiv = document.createElement('div') ;
         let productImg = document.createElement('img') ;
         let productTitle = document.createElement('h2') ;
-        let productdDesc = document.createElement('p') ;
+        let productDesc = document.createElement('p') ;
+        let productPrice = document.createElement('span') ;
+        let productRating = document.createElement('span') ;
+
         productDiv.className = 'card' ;
         productImg.className = 'product-image' ;
         productTitle.className = 'product-title' ;
-        productdDesc.className = 'product-Desc' ;
+        productDesc.className = 'product-desc' ;
+        productPrice.className = 'product-price' ;
+        productRating.className = 'product-rating' ;
 
 
 
@@ -24,7 +29,9 @@ function renderCards(){
             productImg.src = data.products[i].images[0] ;
             productTitle.innerText = data.products[i].title ;
 
-            productdDesc.innerText = data.products[i].description
+            productDesc.innerText = data.products[i].description
+            productPrice.innerText = `Rs ${data.products[i].price}`
+            productRating.innerText = `Rating ${data.products[i].rating}`
         }
 
 
@@ -36,7 +43,9 @@ function renderCards(){
         mainDiv.appendChild(productDiv) ;
         productDiv.appendChild(productImg) ;
         productDiv.appendChild(productTitle) ;
-        productDiv.appendChild(productdDesc)
+        productDiv.appendChild(productDesc) ;
+        productDiv.appendChild(productPrice) ;
+        productDiv.appendChild(productRating) ;
     }
 
 
@@ -57,11 +66,11 @@ async function fetchApi(){
 fetchApi().then(function(){ renderCards()})
 
 function showNav(){
-    toogleNav.className += ' toogled-nav' ;
+    toggleNav.className += ' toggled-nav' ;
 
 }
 
 function hideNav(){
-    toogleNav.className = 'toogle-nav'
+    toggleNav.className = 'toggle-nav'
 }
 
