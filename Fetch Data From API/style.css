@@ -25,7 +25,7 @@ body{
     align-items: baseline;
     position: sticky ;
     top: 0px;
-
+    z-index: 1
 }
 
 .logo{
@@ -148,6 +148,7 @@ body{
     position: fixed;
     top: 0px;
     right: 0px;
+    z-index: 1;
     list-style-type: none;
     display: none;
     transition: width 0.5s ease ;
