@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch Data From API</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 </head>
+
 <body>
 
     <div class="nav">
@@ -21,7 +24,7 @@
         </ul>
 
         <div class="toggle">
-            <span onClick="showNav()"  class="material-symbols-outlined">menu</span>
+            <span onClick="showNav()" class="material-symbols-outlined">menu</span>
         </div>
 
     </div>
@@ -35,10 +38,24 @@
     </ul>
 
     <div class="main" id="main">
-    
+        <div class="loader">
+            <div class="justify-content-center jimu-primary-loading"></div>
+        </div>
     </div>
+    
+            <div class="background">
+                <div class="modal">
+                    <div class="header">
+                        <span onClick="closeModal()"> X</span>
+                    </div>
+                    <div class="product-info">
 
+                    </div>
+                </div>
+            </div>
+    
     
     <script src="app.js"></script>
 </body>
+
 </html>
