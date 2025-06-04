@@ -4,7 +4,7 @@ let loader = document.querySelector('.loader')
 let modalDiv = document.querySelector('.background')
 let data = [];
 
-function renderCards() {
+let renderCards =() => {
     if (data.length < 1) {
         console.log('No Data')
         return
@@ -21,18 +21,20 @@ function renderCards() {
         let productRating = document.createElement('span');
 
         productDiv.className = 'card';
+        productDiv.id = data.products[i].id;
 
-        productDiv.addEventListener('click', () => {
-            modalDiv.style.display = 'flex'
-        } )
-
+        productImg.id = data.products[i].id
+        productTitle.id = data.products[i].id
+        productDesc.id = data.products[i].id
+        productPrice.id = data.products[i].id
+        productRating.id = data.products[i].id
         productImg.className = 'product-image';
         productTitle.className = 'product-title';
         productDesc.className = 'product-desc';
         productPrice.className = 'product-price';
         productRating.className = 'product-rating';
 
-
+        productDiv.addEventListener('click', showDetails)
 
 
         productImg.src = data.products[i].images[0];
@@ -40,12 +42,7 @@ function renderCards() {
 
         productDesc.innerText = data.products[i].description
         productPrice.innerText = `Rs ${data.products[i].price}`
-        productRating.innerText = `Rating ${data.products[i].rating}`
-
-
-
-
-
+        productRating.innerText = `Rating ${printRating( Math.round(data.products[i].rating)) }`
 
 
         mainDiv.appendChild(productDiv);
@@ -55,37 +52,68 @@ function renderCards() {
         productDiv.appendChild(productPrice);
         productDiv.appendChild(productRating);
     }
+}
 
+
+let  showDetails =(e) => {
+    let productInfo = document.querySelector('.product-info')
+    let img = document.querySelector('#product_img');
+    let title = document.querySelector('#product_title');
+    let desc = document.querySelector('#product_desc');
+    let brand = document.querySelector('#brand');
+    let reviwsDiv = document.querySelector('.reviews')
+    let id = Number(e.target.id) - 1;
+    let reviews = data.products[id].reviews
+    
+    modalDiv.style.display = 'flex' ;
+    img.src = data.products[id].images[0];
+    title.innerText = data.products[id].title ;
+    desc.innerText =  data.products[id].description ;
+    brand.innerHTML = `<b>Brand :</b> ${ data.products[id].brand} `;
+    console.log(reviews)
+    // for (let i = 0; i < reviews.length; i++) {
+       
+    //     let review = document.createElement('div') ;
+    //     review.style.lineHeight='2' ;
+
+    //     for (const key in reviews[i]) {
+    //         review.innerHTML += key + ' '+ reviews[i][key] + '<hr>' ;
+    //     }
+
+        
+    //     reviwsDiv.appendChild(review) ;
+    // }
 
 }
 
 
-async function fetchApi() {
+    let  fetchApi = async() => {
     try {
-        
+
         loader.style.display = 'block'
         let response = await fetch('https://dummyjson.com/products')
         data = await response.json();
         console.log(data.products)
-
 
     } catch (error) {
         console.log(error)
     }
 }
 
-fetchApi().then(()=>{renderCards()})
+fetchApi().then(() => { renderCards() })
 
-function closeModal(){
-    modalDiv.style.display = 'none'
+let  closeModal =() => modalDiv.style.display = 'none'
+
+let showNav =() => toggleNav.className += ' toggled-nav' ;
+let hideNav =() => toggleNav.className = 'toggle-nav' ; 
+let printRating = (num)=>{ 
+    let str = "";
+    for (let i = 0; i < num; i++) {
+        
+        str += "⭐" ;
+
+    } 
+    return str
 }
 
-function showNav() {
-    toggleNav.className += ' toggled-nav';
-
-}
-
-function hideNav() {
-    toggleNav.className = 'toggle-nav'
-}
 
