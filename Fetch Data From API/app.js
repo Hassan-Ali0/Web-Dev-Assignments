@@ -71,19 +71,50 @@ let  showDetails =(e) => {
     desc.innerText =  data.products[id].description ;
     brand.innerHTML = `<b>Brand :</b> ${ data.products[id].brand} `;
     console.log(reviews)
-    // for (let i = 0; i < reviews.length; i++) {
+    for (let i = 0; i < reviews.length; i++) {
        
-    //     let review = document.createElement('div') ;
-    //     review.style.lineHeight='2' ;
+        let review = document.createElement('div') ;
+        let reviewTop = document.createElement('div') ;
+        let reviewBottum = document.createElement('div') ;
+        let reviewerNameDiv = document.createElement('div') ;
+        let reviewerEmailDiv = document.createElement('span') ;
+        let reviewerName = document.createElement('span') ;
+        let reviewerComment = document.createElement('span') ;
+        let reviewerEmail = document.createElement('span') ;
+        let reviewerMail = document.createElement('span') ;
+        let reviewerRating = document.createElement('span') ;
+        let reviewerDate = document.createElement('span') ;
+        review.className = 'review' ;
+        reviewTop.className = 'review-top'
+        reviewBottum.className = 'review-bottum'
+        reviewerNameDiv.className = 'reviewer-name'
+        reviewerEmailDiv.className = 'reviewer-email'
+        reviewerName.id = 'reviewer_name_span' ;
+        reviewerComment.id = 'reviewer_comment_span' ;
+        reviewerEmail.id = 'reviewer_email_span' ;
+        reviewerMail.id = 'reviewer_mail_span' ;
 
-    //     for (const key in reviews[i]) {
-    //         review.innerHTML += key + ' '+ reviews[i][key] + '<hr>' ;
-    //     }
-
+        reviewerName.innerText = reviews[i].reviewerName
+        reviewerComment.innerText = reviews[i].comment
+        reviewerEmail.innerText = 'Reviewer Email'
+        reviewerMail.innerText = reviews[i].reviewerEmail
+        reviewerRating.innerText = `Rating ${printRating( Math.round(reviews[i].rating)) }`
+        reviewerDate.innerText = reviews[i].date
         
-    //     reviwsDiv.appendChild(review) ;
-    // }
-
+        
+        reviwsDiv.appendChild(review) ;
+        review.appendChild(reviewTop) ;
+        review.appendChild(reviewBottum) ;
+        reviewTop.appendChild(reviewerNameDiv) ;
+        reviewTop.appendChild(reviewerEmailDiv) ;
+        reviewBottum.appendChild(reviewerRating) ;
+        reviewBottum.appendChild(reviewerDate) ;
+        reviewerNameDiv.appendChild(reviewerName) ;
+        reviewerNameDiv.appendChild(reviewerComment) ;
+        reviewerEmailDiv.appendChild(reviewerEmail) ;
+        reviewerEmailDiv.appendChild(reviewerMail) ;
+    }
+    console.log(reviews)
 }
 
 
