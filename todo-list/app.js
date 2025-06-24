@@ -47,13 +47,41 @@ let renderTodos = () => {
         todoPara.id = todo.uid
 
 
-        editBtn.addEventListener("click",async(e) => {
-            let uid = e.target.parentNode.childNodes[0].id
+        editBtn.addEventListener("click", async (e) => {
+            let uid = e.target.parentNode.childNodes[0].id ;
+            let guidSpan = document.querySelector("#user_guid") ;
+            
+            todoInput.value = e.target.parentNode.childNodes[0].innerText
+            
+            inputBc.style.display = 'flex';
+            guidSpan.style.display = 'none'
+            guidSpan.parentNode.style.justifyContent = 'end'
+            addBtn.style.display = 'block'
+            inputDiv.childNodes[3].childNodes[1].innerText = "Edit Task"
+            
+            todoInput.removeEventListener("keypress",addTodoWithBtn)
+            addBtn.addEventListener("click", async () => {
+                try {
+                    inputBc.style.display = 'none';
+                    
+                    const updateDocRef = doc(db, "todos", uid);
+                    await updateDoc(updateDocRef, {
+                        todo: todoInput.value
+                    })
 
-            const updateDocRef = doc(db, "todos", uid);
-            await updateDoc(updateDocRef, {
-                todo: "edited todo"
+                    todoInput.value = '' ;
+                    inputDiv.childNodes[3].childNodes[1].innerText = "Add Task"
+                    addBtn.style.display = 'none'
+                    guidSpan.style.display = 'inline'
+                    guidSpan.parentNode.style.justifyContent = 'center'
+                    todoInput.addEventListener("keypress", addTodoWithBtn)
+                    
+                } catch (error) {
+                    console.error(error)
+                }
             })
+
+
         })
 
 
@@ -61,14 +89,19 @@ let renderTodos = () => {
             try {
                 let uid = e.target.parentNode.childNodes[0].id
                 await deleteDoc(doc(db, "todos", uid))
-                console.log()
 
             } catch (error) {
                 console.error(error)
             }
         })
+
         todoPara.addEventListener("click", () => {
-            todoDiv.className += ' complete'
+            if (todoDiv.className == 'todo') {
+                todoDiv.className += ' complete'
+            } else {
+                todoDiv.className = 'todo'
+            }
+
 
         })
 
@@ -93,7 +126,6 @@ const unsub = onSnapshot(collection(db, "todos"), (res) => {
     })
     renderTodos()
 
-    console.log(todos)
 })
 
 
@@ -103,13 +135,13 @@ let addTodo = async () => {
     todoList.innerHTML = '';
 
     if (todoInput.value != '') {
-
+        
         inputBc.style.display = 'none'
         try {
             const docRef = await addDoc(collection(db, "todos"), {
                 todo: todoInput.value
             });
-            console.log("Document written with ID: ", docRef.id);
+            
         } catch (e) {
             console.error("Error adding document: ", e);
         }
@@ -118,16 +150,15 @@ let addTodo = async () => {
     } else {
         alert("Enter a Task !")
     }
-    console.log(todos)
 }
 
-addBtn.addEventListener("click", addTodo);
-
-todoInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
+let addTodoWithBtn = (e)=>{
+    if(e.key === "Enter"){
         addTodo()
     }
-})
+}
+
+todoInput.addEventListener("keypress",addTodoWithBtn)
 
 
 
