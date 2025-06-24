@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="header">
+            <h1>Todo List</h1>
+        </div>
+        <div class="section">
+            <div class="todo-list">
+                <div class="loader">
+                    
+                </div>
+            </div>
+            <div class="bottum">
+                <button id="show_input_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#00000"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                </button>
+            </div>
+            <div class="todo-input-background" id="input_bc">
+
+                <div class="todo-input-container">
+                    <div class="todo-header">
+                        <button id="close_input">
+                            <img src="./assets/close_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="todo-input">
+                        <h2>Add Task</h2>
+                        <input type="text" id="todo_input" autofocus>
+                    </div>
+            
+                    <div class="todo-bottum">
+                        <button id="add_task" > 
+                            Add Task
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./firebaseconfig.js" type="module" ></script>
+    <script src="app.js" type="module"></script>
+    
+</body>
+
+</html>

@@ -133,8 +133,9 @@ let  showDetails =(e) => {
 
 fetchApi().then(() => { renderCards() })
 
-let  closeModal =() => modalDiv.style.display = 'none'
-
+let  closeModal =() => {modalDiv.style.display = 'none' 
+     document.querySelector('.reviews').innerHTML = '' ;
+}
 let showNav =() => toggleNav.className += ' toggled-nav' ;
 let hideNav =() => toggleNav.className = 'toggle-nav' ; 
 let printRating = (num)=>{ 
