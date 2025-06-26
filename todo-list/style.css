@@ -78,7 +78,7 @@ body {
     width: 50px;
     height: 50px;
     border: 8px solid #1e293b;
-    border-top: 8px solid #38bdf8;
+    border-top: 8px solid #20d6ca;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     
@@ -147,18 +147,34 @@ body {
 .bottum {
     height: 15%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: start;
     padding: 10px 20px;
     box-sizing: border-box;
 }
 
-.bottum>button {
+.bottum>#show_input_btn {
     color: black;
     background-color: #20d6ca;
     border: none;
     border-radius: 50%;
     padding: 10px;
+    cursor: pointer;
+}
+
+.bottum>#delete_all{
+    height: 50px;
+    /* width: 150px; */
+    padding: 10px;
+    font-size: 1.3em;
+    color: white;
+    background-color: #151517;
+    border: 2px solid #605b5b;
+    border-radius: 15px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     cursor: pointer;
 }
 
@@ -247,10 +263,19 @@ body {
     display: none;
 }
 
+.no-todo{
+    color: white;
+    font-size: 2em;
+}
+
 @media only screen and (max-width:425px) {
 
-    .bottum>button {
+    .bottum>#show_input_btn {
         padding: 5px;
+    }
+
+    .bottum>#delete_all {
+        padding: 7px;
     }
 
     #add_task {

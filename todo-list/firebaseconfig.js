@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
-  import { getFirestore ,onSnapshot,collection, getDocs, addDoc ,doc, deleteDoc, updateDoc,} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+  import { getFirestore ,onSnapshot,query, orderBy,collection, getDocs, addDoc ,doc, deleteDoc, updateDoc,} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
 
 
@@ -26,4 +26,4 @@
   const analytics = getAnalytics(app);
   const db = getFirestore(app);
 
-  export {db ,onSnapshot,collection, getDocs, addDoc ,doc, deleteDoc, updateDoc} ;
+  export {db ,onSnapshot,query, orderBy,collection, getDocs, addDoc ,doc, deleteDoc, updateDoc} ;
