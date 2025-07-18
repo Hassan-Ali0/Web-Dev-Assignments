@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --bgcolor: #fff;
+    --txtcolor: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 10px;
+    background-repeat: no-repeat;
+    background-color: #ececec;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.nav {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.theme-btn {
+    height: 50px;
+    width: 50px;
+    background-color: inherit;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.light {
+    background-color: #ffffff;
+    display: none;
+    background-image: url(../../assets/sun-3-24.png);
+}
+
+.dark {
+    color: #fff;
+    background-color: #161616;
+    background-image: url(../../assets/moon-4-24.png);
+}
+
+.main {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+
+
+.logo {
+    color: #0008ff;
+    font-size: 2.5em;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+}
+
+.form-container {
+    height: 440px;
+    width: 95%;
+    max-width: 370px;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    row-gap: 20px;
+    background-color: var(--bgcolor);
+    color: var(--txtcolor);
+}
+
+.input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1em;
+    position: relative;
+}
+
+.password {
+    height: 80px;
+    margin-bottom: 25px;
+}
+
+
+.input-box>input {
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    padding: 0px 10px;
+    font-size: 1.1em;
+    color: var(--txtcolor);
+    background-color: inherit;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 5px;
+
+}
+
+.fokus:focus {
+    border: 1px solid #1570ef;
+    box-shadow: 0px 0px 2px 0px #1570ef;
+}
+
+.input-focus, .input-focus:focus {
+    border: 1px solid red !important;
+    box-shadow: none;
+}
+
+.input-box>input:focus {
+    border: 1px solid #1570ef;
+    box-shadow: 0px 0px 2px 0px #1570ef;
+}
+
+.eye {
+    height: 20px;
+    width: 24px;
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    right: 8px;
+    bottom: 27px;
+    opacity: 0.8;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.visible {
+    background-image: url(../../assets/SVGs/visible.svg);
+    color: #fff;
+}
+
+.hide {
+    background-image: url(../../assets/SVGs/hide.svg);
+    display: none;
+}
+
+
+.singup {
+    color: #fff;
+    background-color: #1570ef;
+}
+
+.google {
+    color: #1570ef;
+    background-color: #d1e9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn {
+    height: 40px;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.suggest {
+    text-align: center;
+}
+
+.suggest>a {
+    color: rgb(2, 150, 241);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.suggest>a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:780px) {}
